@@ -1,0 +1,12 @@
+
+for k in 8 16 32 200
+do
+	for t in 1 2 4 8 16 32 100 300
+	do
+		echo Clusters: $k Threads $t 
+		time ./kmeans 494020.txt $k $t >out 
+	done
+
+done
+
+rm out
